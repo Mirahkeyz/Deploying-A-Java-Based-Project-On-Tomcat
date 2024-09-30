@@ -24,4 +24,16 @@ sudo yum install java-17-amazon-corretto-devel
 
 - Install Tomcat using the code below
 
-https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.95/bin/apache-tomcat-9.0.95.tar.gz
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.95/bin/apache-tomcat-9.0.95.tar.gz
+
+tar -xvzf apache-tomcat-9.0.95.tar.gz
+
+cd apache-tomcat-9.0.95
+
+cd bin
+
+./startup.sh
+
+- test that the tomcat server is running on your browser by using your public Ip Address
+
+# Step 3: Configuring Jenkins
