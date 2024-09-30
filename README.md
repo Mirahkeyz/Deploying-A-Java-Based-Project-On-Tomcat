@@ -47,3 +47,9 @@ cd bin
 - for Build Steps select invoke top-level Maven Targets then for Maven Version select Maven
 - then for Goals select compile, Add another Build Steps, select invoke top-level Maven Targets then select Maven under the Maven Version then for Goals put package then click save
 - Then click on Build Now
+- next go to Dashboard, Manage jenkins, system then go ssh servers then click on Add
+- for Name give a name e.g tomcat-server, for Hostname put the public ip of tomcat-server, for username put ec2-user, for remote directory go to your terminal where you installed tomcat and copy the directory for webapps, click on the checkbox for use password authentication, or use a different key, then scroll to key then paste your private key.
+-  click on test configuration and when it shows success then save.
+-  Next is to go back to your project, click on configure, scroll down to Post Build Actions, select send build artifacts over ssh.
+-  then scroll to Transfer Sets, under it there is source files then put your source files e.g target/addressbook-2.0.war then for Remote Prefix put target/ then click save.
+-  Then click Build Now. then go back to your tomcat terminal and start the server
