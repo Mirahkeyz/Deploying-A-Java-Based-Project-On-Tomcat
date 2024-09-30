@@ -37,3 +37,13 @@ cd bin
 - test that the tomcat server is running on your browser by using your public Ip Address
 
 # Step 3: Configuring Jenkins
+
+- go to jenkins-manage jenkins-plugins-available plugins, then search for Publish over ssh and install it
+- go to manage jenkins-tools-maven installation-for the name give it Maven and save
+- go back to the homepage and click on new item, give it a name and select freestyle project
+- go to the project created, go to General, for description give it a name, click the checkbox for Discard old builds, put 30 for days to keep builds then put 2 for Max of builds to keep
+- for source code management select Git then under repositories put the link copied from Github,
+- for Build Environment click the checkbox for Delete workspace before build starts
+- for Build Steps select invoke top-level Maven Targets then for Maven Version select Maven
+- then for Goals select compile, Add another Build Steps, select invoke top-level Maven Targets then select Maven under the Maven Version then for Goals put package then click save
+- Then click on Build Now
